@@ -1,7 +1,13 @@
-import streamlit as st
-import google.generativeai as genai 
+#!/usr/bin/env python
+# coding: utf-8
 
-API_KEY = "AIzaSyB-lhDUTsuppIMA4QSMlRIuIK1bHvx2yJA"
+# In[ ]:
+
+
+import streamlit as st
+import google.generativeai as genai
+
+API_KEY = "AIzaSyBsq5Kd5nJgx2fejR77NT8v5Lk3PK4gbH8"
 
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
@@ -10,7 +16,6 @@ if "chat" not in st.session_state:
     st.session_state.chat = model.start_chat(history=[])
 
 st.title("🤖 Chatbot - Your AI Assistant")
-st.write("Welcome to my ChatBot! How can i help you?")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
