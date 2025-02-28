@@ -1,5 +1,5 @@
-import steramlit as st #webapplications
-import google.generativeai as genai #interact with google
+import steramlit as st 
+import google.generativeai as genai 
 API_KEY = "AIzaSyB-lhDUTsuppIMA4QSMlRIuIK1bHvx2yJA"
 
 genai.configure(api_key=API_KEY)
